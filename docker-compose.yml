@@ -1,0 +1,12 @@
+version: '3'
+services:
+  grafana:
+    build: .
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GF_SECURITY_ADMIN_PASSWORD}
+
+volumes:
+  grafana-storage:
